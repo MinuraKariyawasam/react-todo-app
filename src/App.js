@@ -1,39 +1,19 @@
-import { Component } from 'react';
-import './App.css';
-import Todos from './components/Todos';
+import React from 'react';
+import CounterExample from './CounterExample/CounterExample';
+import Header from './Components/Header';
+import Footer from './Components/Footer';
+import Navigation from './Components/Navigation';
 
-class App extends Component{
 
-    state = {
-        todos: [
 
-            {
-                id: 1,
-                title: 'HTML tutorials',
-                completed: false
-            },
+function App() {
+    return (
+    <div>
+        <Header/>
 
-            {
-                id: 2,
-                title: 'Java tutorials',
-                completed: false
-            },
-
-            {
-                id: 3,
-                title: 'JS tutorials',
-                completed: false
-            }
-        ]
-    }
-    render(){
-        // console.log(this.state.todos);
-    return ( 
-       <div className = "App" >
-        <Todos todos= {this.state.todos}/>
-       </div>
+        <Footer/>
+    </div>
     );
-    }
 }
 
 
